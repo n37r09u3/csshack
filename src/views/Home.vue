@@ -6,16 +6,16 @@
       <div class="border bottom"></div>
       <div class="border right"></div>
       <div class="border left"></div>
-      <div class="corner">
+      <div class="corner top-left">
 
       </div>
-      <div class="corner">
+      <div class="corner top-right">
 
       </div>
-      <div class="corner">
+      <div class="corner bottom-left">
 
       </div>
-      <div class="corner">
+      <div class="corner bottom-right">
 
       </div>
       <button class="button">按钮</button>
@@ -95,7 +95,57 @@ display: inline-block;
     }
   }
   .corner{
-
+    &.top-left{
+      z-index: 2;
+      top: 0;
+      width: 5px;
+      height: 5px;
+      border-width: 1px 0 0 1px;
+      opacity: 1;
+      position: absolute;
+      transition: all 250ms ease-in;
+      border-style: solid;
+      border-color: red;
+    }
+    &.top-right{
+      z-index: 2;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 5px;
+      border-width: 1px 1px 0 0;
+      opacity: 1;
+      position: absolute;
+      transition: all 250ms ease-in;
+      border-style: solid;
+      border-color: red;
+    }
+    &.bottom-left{
+      z-index: 2;
+      bottom: 0;
+      left:0;
+      width: 5px;
+      height: 5px;
+      border-width: 0 0 1px 1px;
+      opacity: 1;
+      position: absolute;
+      transition: all 250ms ease-in;
+      border-style: solid;
+      border-color: red;
+    }
+    &.bottom-right{
+      z-index: 2;
+      bottom: 0;
+      right:0;
+      width: 5px;
+      height: 5px;
+      border-width: 0 1px 1px 0;
+      opacity: 1;
+      position: absolute;
+      transition: all 250ms ease-in;
+      border-style: solid;
+      border-color: red;
+    }
   }
   .button{
     background: transparent ;
