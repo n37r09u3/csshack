@@ -18,7 +18,12 @@
       <div class="corner bottom-right">
 
       </div>
-      <button class="button">按钮</button>
+
+      <div class="frame">
+        <button class="button">按钮</button>
+
+      </div>
+
 
     </div>
 
@@ -43,8 +48,10 @@ export default {
 .arwes {
 position: relative;
 display: inline-block;
-
-
+.frame{
+  background: transparent ;
+  transition: background-color 250ms ease-in;
+}
   .border{
 
     &.top{
@@ -97,7 +104,8 @@ display: inline-block;
   .corner{
     &.top-left{
       z-index: 2;
-      top: 0;
+      top: -1px;
+      left: -1px;
       width: 5px;
       height: 5px;
       border-width: 1px 0 0 1px;
@@ -105,12 +113,13 @@ display: inline-block;
       position: absolute;
       transition: all 250ms ease-in;
       border-style: solid;
-      border-color: red;
+      border-color: #acf9fb;
+      box-shadow: 0 0 4px -2px rgba(172,249,251,0);
     }
     &.top-right{
       z-index: 2;
-      top: 0;
-      right: 0;
+      top: -1px;
+      right: -1px;
       width: 5px;
       height: 5px;
       border-width: 1px 1px 0 0;
@@ -118,12 +127,13 @@ display: inline-block;
       position: absolute;
       transition: all 250ms ease-in;
       border-style: solid;
-      border-color: red;
+      border-color: #acf9fb;
+      box-shadow: 0 0 4px -2px rgba(172,249,251,0);
     }
     &.bottom-left{
       z-index: 2;
-      bottom: 0;
-      left:0;
+      bottom: -1px;
+      left:-1px;
       width: 5px;
       height: 5px;
       border-width: 0 0 1px 1px;
@@ -131,12 +141,13 @@ display: inline-block;
       position: absolute;
       transition: all 250ms ease-in;
       border-style: solid;
-      border-color: red;
+      border-color: #acf9fb;
+      box-shadow: 0 0 4px -2px rgba(172,249,251,0);
     }
     &.bottom-right{
       z-index: 2;
-      bottom: 0;
-      right:0;
+      bottom: -1px;
+      right:-1px;
       width: 5px;
       height: 5px;
       border-width: 0 1px 1px 0;
@@ -144,13 +155,21 @@ display: inline-block;
       position: absolute;
       transition: all 250ms ease-in;
       border-style: solid;
-      border-color: red;
+      border-color: #acf9fb;
+      box-shadow: 0 0 4px -2px rgba(172,249,251,0);
     }
   }
   .button{
+    color: #acf9fb;
+    display: block;
+    line-height: 1;
     background: transparent ;
     border: none;
     cursor: pointer;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px 20px;
+    outline: none;
   }
 }
 
